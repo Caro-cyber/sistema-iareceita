@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Receitas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Assistente de Receitas Domésticas</h1>
+        <p>Quais ingredientes você tem em casa?</p>
+        <textarea id="ingredientsInput" rows="5" placeholder="Ex: tomate, cebola, ovos, arroz"></textarea>
+        <button id="findRecipesBtn">Encontrar Receitas</button>
+        
+        <div id="recipesResult" class="hidden">
+            <h2>Sugestões de Receitas:</h2>
+            <div id="recipesList">
+                <!-- As receitas serão inseridas aqui pelo JavaScript -->
+            </div>
+        </div>
+
+        <div id="recipeDetail" class="hidden">
+            <button id="backToListBtn" class="secondary-button">← Voltar para Lista</button>
+            <h3 id="recipeName"></h3>
+            <h4>Ingredientes:</h4>
+            <pre id="recipeIngredients"></pre>
+            <h4>Modo de Preparo:</h4>
+            <pre id="recipeInstructions"></pre>
+            <button id="playAudioBtn">Ouvir Instruções</button>
+            <audio id="recipeAudio" controls class="hidden"></audio>
+            <div id="audioError" class="error-message hidden"></div>
+
+            <div id="qaSection" class="hidden">
+                <h4>Tem alguma dúvida sobre esta receita?</h4>
+                <input type="text" id="followUpQuestionInput" placeholder="Ex: Posso substituir sal por shoyu?">
+                <button id="askQuestionBtn">Perguntar</button>
+                <div id="qaAnswer" class="hidden">
+                    <p><strong>Resposta:</strong> <span id="answerText"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="loadingMessage" class="hidden">
+            <p>Buscando receitas... Por favor, aguarde.</p>
+        </div>
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1, h2, h3, h4 {
+    color: #333;
+}
+textarea, input[type="text"] {
+    width: calc(100% - 22px); /* Considera padding e borda */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    display: inline-block;
+    background: #5cb85c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+button:hover {
+    background: #4cae4c;
+}
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background: #6c757d;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.secondary-button:hover {
+    background: #5a6268;
+}
+
+#recipesResult, #recipeDetail, #loadingMessage, #errorMessage, #qaSection, #qaAnswer {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.hidden {
+    display: none;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+#recipesList button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+#recipesList button:hover {
+    background-color: #e0e0e0;
+}
+pre {
+    white-space: pre-wrap; /* Permite quebra de linha no texto de ingredientes/instruções */
+    word-wrap: break-word;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+audio {
+    width: 100%;
+    margin-top: 10px;
+} 
