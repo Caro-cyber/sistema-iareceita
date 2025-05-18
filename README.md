@@ -71,8 +71,8 @@ As chaves de API para o Google Gemini e Google Text-to-Speech precisam ser confi
 Crie um arquivo .env na raiz do projeto (se ele não existir) e adicione suas chaves:
 
 # Exemplo de arquivo .env
-GOOGLE_API_KEY_GEMINI="SUA_CHAVE_API_GOOGLE_GEMINI"
-GOOGLE_API_KEY_TTS="SUA_CHAVE_API_GOOGLE_TTS"
+GEMINI_API_KEY="SUA_CHAVE_API_GOOGLE_GEMINI"
+GOOGLE_APPLICATION_CREDENTIALS="CAMINHO_COMPLETO_DO_ARQUIVO_JSON_DE_CREDENCIAIS"
 # Outras variáveis de ambiente se necessário
 
 (Você precisará garantir que o código Python lê essas variáveis de ambiente, por exemplo, usando a biblioteca python-dotenv e configurando as chamadas às APIs do Google para usar essas chaves).
@@ -82,7 +82,7 @@ Após seguir os passos de instalação e configurar suas chaves de API, você po
 
 Assumindo que o ponto de entrada do seu assistente seja um arquivo Python (por exemplo, main.py ou assistant.py), execute-o com o Python:
 
-python seu_arquivo_principal.py
+python app.py
 
 O assistente deverá iniciar no terminal (ou na interface que você desenvolver) e solicitar os ingredientes.
 
